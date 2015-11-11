@@ -1,0 +1,94 @@
+include ./lib/header.jade
+    script.
+        !(function() {
+            var rem;
+            rem = function() {
+                document.documentElement.style.fontSize = (document.documentElement.clientWidth || document.documentElement.clientWidth) + 'px';
+            };
+            rem();
+            window.addEventListener('resize', rem, false);
+            var _hmt = _hmt || []
+        })();
+
+    link(href="/static/css/index.css",rel="stylesheet",type="text/css")
+    body
+        audio#audio(src="/static/image/background.mp3",loop="loop")
+        div.share=""
+        section.swiper-container
+            section.swiper-wrapper
+                section.swiper-slide(class="page page1")
+                    div.background=""
+                    div.music.music-play=""
+                    div.nav=""
+                    div.font-title=""
+                    div.subtitle=""
+                    div.p1-cloud=""
+                    div.coins1=""
+                    div.coins2=""
+                    div.coins3=""
+                    div.up=""
+                    div.car0=""
+                    div.car1=""
+                    div.car2=""
+                    div.bottom=""
+                section.swiper-slide(class="page page2")
+                    div.background=""
+                    div.music.music-play=""
+                    div.building=""
+                    div.nav=""
+                    div.cloud1=""
+                    div.cloud2=""
+                    div.running-car=""
+                    div.running-circle1=""
+                    div.running-circle2=""
+                    div.p1.active=""
+                    div.p2=""
+                    div.p3=""
+                    div.p2-text1=""
+                    div.p2-text2=""
+                    div.p2-text3=""
+                    div.up=""
+                section.swiper-slide(class="page page3")
+                    div.background=""
+                    div.music.music-play=""
+                    div.nav=""
+                    div.title=""
+                    div.main=""
+                    div.main3-text=""
+                    div.up=""
+                section.swiper-slide(class="page page4")
+                    div.background=""
+                    div.music.music-play=""
+                    div.nav=""
+                    div.title=""
+                    div.sub-title=""
+                    div.main=""
+                    div.main4-text=""
+                    div.first=""
+                    div.second=""
+                    div.third=""
+                    div.up=""
+                section.swiper-slide(class="page page5")
+                    div.background=""
+                    div.music.music-play=""
+                    div.nav=""
+                    div.stone=""
+                    div.p5-c1=""
+                    div.p5-c2=""
+                    div.p5-c3=""
+                    div.p5-c4=""
+                    img.qrcode(src="/static/image/qrcode.jpg")
+                    div.share-btn=""
+                    div.up=""
+                    
+    script(language="javascript",src="/static/js/index.min.js")
+    script(language="javascript",src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
+    script.
+        var _hmt = _hmt || [];
+        (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?7cde9743ed9d8d859c25d6693815b34f";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+
+        })();
