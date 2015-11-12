@@ -26,6 +26,12 @@ window.onload = function(){
             $(".music").addClass("music-play");
         }
     });
+    $(".share-btn").on('tap',function(){
+        $(".share").velocity("fadeIn");
+    });
+    $(".share").on('tap',function(){
+        $(".share").velocity("fadeOut");
+    });
     var clearAnimation = function(fun) {
         $(".title").hide();
         $(".sound").hide();
