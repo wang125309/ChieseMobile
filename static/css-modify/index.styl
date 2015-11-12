@@ -106,27 +106,12 @@
     100%
         -webkit-transform:translateY(-0.9rem)
         opacity:0
-@-webkit-keyframes cloud1-fly
-    0%
-        opacity:0
-        -webkit-transform:translateX(0rem)
-    20%
-        -webkit-transform:translateX(0rem)
-        opacity:0
-    60%
-        -webkit-transform:translateX(-0.08rem)
-        opacity:1
-    100%
-        opacity:0
-        -webkit-transform:translateX(-0.16rem)
+
 @-webkit-keyframes p5-c1
     0%
         opacity:0
         -webkit-transform:translateX(0rem)
-    20%
-        -webkit-transform:translateX(0rem)
-        opacity:0
-    60%
+    50%
         -webkit-transform:translateX(-0.08rem)
         opacity:1
     100%
@@ -136,10 +121,7 @@
     0%
         opacity:0
         -webkit-transform:translateX(0rem)
-    20%
-        -webkit-transform:translateX(0rem)
-        opacity:0
-    60%
+    50%
         -webkit-transform:translateX(-0.08rem)
         opacity:1
     100%
@@ -149,10 +131,7 @@
     0%
         opacity:0
         -webkit-transform:translateX(0rem)
-    20%
-        -webkit-transform:translateX(0rem)
-        opacity:0
-    60%
+    50%
         -webkit-transform:translateX(-0.05rem)
         opacity:1
     100%
@@ -199,6 +178,16 @@
         -webkit-transform:rotate(0)
     100%
         -webkit-transform:rotate(0)
+@-webkit-keyframes cloud1-fly
+    0%
+        opacity:0
+        -webkit-transform:translateX(0rem)
+    50%
+        -webkit-transform:translateX(-0.08rem)
+        opacity:1
+    100%
+        opacity:0
+        -webkit-transform:translateX(-0.16rem)
 @-webkit-keyframes cloud2-fly
     0%
         opacity:0
@@ -561,7 +550,7 @@ body
             top:0
             position:absolute
             -webkit-animation-iteration-count:infinite
-            animation(4s,'cloud2-fly',1s)
+            animation(5s,'cloud2-fly',2s)
         .p1
             image-wauto('point1.png')
             width:0.05rem
