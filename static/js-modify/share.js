@@ -3,19 +3,19 @@ $(function(){
 		"url":location.href
 	},function(data){
 		wx.config(data);
+        var share = function() {
+            shareJson = {
+                link:"http://cm.qingdianer.com",
+                imgUrl:"http://cm.qingdianer.com/static/image/share.jpg",
+                title:"一字千金",
+                desc:"中国移动车联网活动来啦~"
+
+            };
+			wx.onMenuShareTimeline(shareJson);
+			wx.onMenuShareAppMessage(shareJson);
+        };
 		wx.ready(function(){
-			wx.onMenuShareTimeline({
-                link:"http://football.qingdianer.com",
-                imgUrl:"http://football.qingdianer.com/static/image/share-image.jpg",
-                title:"呐喊吧！为国足加油！",
-                desc:"喊出你的最强者，为中国队空中加油！更有足球装备等你来赢！不吝铁肺，放胆来试！"
-			});
-			wx.onMenuShareAppMessage({
-                link:"http://football.qingdianer.com",
-                imgUrl:"http://football.qingdianer.com/static/image/share-image.jpg",
-                title:"呐喊吧！为国足加油！",
-                desc:"喊出你的最强者，为中国队空中加油！更有足球装备等你来赢！不吝铁肺，放胆来试！"
-			});
+            share();
         });
 		wx.error(function(res){
 			$.get("/wx/portal/update_access_token/",function(data){
@@ -24,19 +24,8 @@ $(function(){
 				},function(data){
 					wx.config(data);
 					wx.ready(function(){
-                        wx.onMenuShareTimeline({
-                            link:"http://football.qingdianer.com",
-                            imgUrl:"http://football.qingdianer.com/static/image/share-image.jpg",
-                            title:"呐喊吧！为国足加油！",
-                            desc:"喊出你的最强者，为中国队空中加油！更有足球装备等你来赢！不吝铁肺，放胆来试！"
-                        });
-                        wx.onMenuShareAppMessage({
-                            link:"http://football.qingdianer.com",
-                            imgUrl:"http://football.qingdianer.com/static/image/share-image.jpg",
-                            title:"呐喊吧！为国足加油！",
-                            desc:"喊出你的最强者，为中国队空中加油！更有足球装备等你来赢！不吝铁肺，放胆来试！"
-                        });
-		            });
+		                share();
+                    });
 		        });
 		    });
         });
