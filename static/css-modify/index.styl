@@ -266,6 +266,12 @@
     50% 
         -webkit-transform:scale(1.2)
         opacity:1
+        
+@-webkit-keyframes building 
+    0%
+        -webkit-transform:translateX(1rem)
+    100% 
+        -webkit-transform:translateX(-1rem)
 
 @-webkit-keyframes desc 
     0%,100% 
@@ -510,7 +516,18 @@ body
             background-position:top center
             width:100%
             height:1.5rem
-            z-index:1
+            z-index:7
+            top:0
+            position:absolute
+            animation(5s,'building',0s)
+            -webkit-animation-iteration-count:infinite
+            -webkit-animation-timing-function: linear
+        .main2
+            image-wauto('main2-back.png')
+            background-position:top center
+            width:100%
+            height:1.5rem
+            z-index:5
             top:0
             position:absolute
         .running-car
@@ -518,7 +535,7 @@ body
             background-position:top center
             width:100%
             height:1.5rem
-            z-index:2
+            z-index:12
             top:0
             position:absolute
         .running-circle1
@@ -528,7 +545,7 @@ body
             height:0.14rem
             top:0.885rem
             left:0.18rem
-            z-index:2
+            z-index:12
             position:absolute
             animation(5s,'ratote',0s)
             -webkit-animation-iteration-count:infinite
@@ -538,10 +555,9 @@ body
             background-position:top center
             width:0.135rem
             height:0.14rem
-            z-index:2
+            z-index:12
             top:0.885rem
             right:0.15rem
-
             position:absolute
             animation(5s,'ratote',0s)
             -webkit-animation-iteration-count:infinite
