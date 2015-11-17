@@ -26,6 +26,23 @@ window.onload = function(){
             $(".music").addClass("music-play");
         }
     });
+    var tabActive = function(tab) {
+            for(i=1;i<=3;i++) {
+                $(".p"+i).removeClass("active");
+                $(".p2-text"+i).velocity("fadeOut");
+            }
+            $(".p"+tab).addClass("active");
+            $(".p2-text"+tab).velocity("fadeIn");
+        };
+        $(".p1").on('tap',function(){
+            tabActive(1);   
+        });
+        $(".p2").on('tap',function(){
+            tabActive(2);   
+        });
+        $(".p3").on('tap',function(){
+            tabActive(3);   
+        });
     $(".share-btn").on('tap',function(){
         $(".share").velocity("fadeIn");
     });
@@ -50,23 +67,7 @@ window.onload = function(){
     var page2Show = function() {
         clearInterval(car);
         $(".p2-text1").velocity("fadeIn");
-        var tabActive = function(tab) {
-            for(i=1;i<=3;i++) {
-                $(".p"+i).removeClass("active");
-                $(".p2-text"+i).velocity("fadeOut");
-            }
-            $(".p"+tab).addClass("active");
-            $(".p2-text"+tab).velocity("fadeIn");
-        };
-        $(".p1").on('tap',function(){
-            tabActive(1);   
-        });
-        $(".p2").on('tap',function(){
-            tabActive(2);   
-        });
-        $(".p3").on('tap',function(){
-            tabActive(3);   
-        });
+
     };
     var page3Show = function() {
         $(".page3 .title").velocity("fadeIn");
