@@ -248,10 +248,25 @@
 @-webkit-keyframes text-in 
     0%
         opacity:0
-    
+        
     100% 
         opacity:1
-
+    
+@-webkit-keyframes prize
+    0%
+        opacity:0
+    50%
+        opacity:1
+    60%
+        -webkit-transform:scale(1)
+    70%
+        -webkit-transform:scale(1.1)
+    80%
+        -webkit-transform:scale(1)
+    90%
+        -webkit-transform:scale(1.1)
+    100%
+        -webkit-transform:scale(1)
 @-webkit-keyframes sound 
     0%,100% 
         opacity:0
@@ -736,7 +751,7 @@ body
             position:absolute
             background-position:bottom
             z-index:2
-            animation(1s,'text-in',1s)
+            animation(1s,'prize',1s)
             display:none
         .second
             image-wauto('main4-second.png')
@@ -746,7 +761,7 @@ body
             position:absolute
             background-position:bottom
             z-index:2
-            animation(1s,'text-in',1.3s)
+            animation(1s,'prize',1.3s)
             display:none
         .third
             image-wauto('main4-third.png')
@@ -756,7 +771,7 @@ body
             position:absolute
             background-position:bottom
             z-index:2
-            animation(1s,'text-in',1.6s)
+            animation(1s,'prize',1.6s)
             display:none
     .page5 
         .background 
